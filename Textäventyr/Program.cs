@@ -10,6 +10,11 @@ namespace Textäventyr
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hej och välkommen!");
+            Console.WriteLine("Om du vill starta spelet, tryck Enter");
+            Console.WriteLine("Om du vill stänga ner spelet, tryck Escape");
+            Console.WriteLine("Lycka till!");
+
             int liv = 3;
 
             //Vaknar i cellen
@@ -33,6 +38,7 @@ namespace Textäventyr
 
             //Kommer ut ur cellen
             Console.WriteLine("Låset slår i stengolvet och dörren går upp. Du sticker ut huvudet för att se så att ingen av vakterna hörde");
+            
             Console.WriteLine(" -Bra gjort! Gå nu innan någon kommer för att kolla till dig.");
             Console.WriteLine("Tänk inte på mig, jag är bara en gammal man, om de hade velat skada mig hade de gjort det för länge sedan");
             Console.WriteLine("Du går ut i korridoren mellan cellerna. Längst bort syns en dörr, du skyndar mot den");
@@ -78,6 +84,17 @@ namespace Textäventyr
             Console.WriteLine(" -Om du trycker på statyns högra framtass kommer en lönndörr att öppnas. Följ korridoren tills den tar slut och tryck på väggen där.");
             Console.WriteLine("Du kommer att hamna i en korridor där du ska gå vänster. Om du gör detta borde du komma närmare utgången.");
             Console.WriteLine("Innan du hinner tacka katten för hjälpen har den försvunnit");
+
+            //slutet
+            Console.WriteLine("Du trycker på statyns högra framtass och dörren öppnas.");
+            Console.WriteLine("Du följer korridoren åt vänster och när du rundar ett hörn ser du den, utgången, och du börjar gå fortare.");
+            Console.WriteLine("När du bara är några meter från dörren kommer en man ut från en korridor precis jämte dörren.");
+            Console.WriteLine(" -Hallå! Vad gör du utanför din cell? Hur tog du dig förbi alla vakter som jag har ställt ut?");
+            Console.WriteLine("Det spelar ingen roll nu, du kommer aldrig ta dig ut härifrån, inte om jag får bestämma!");
+            Console.WriteLine("För att ta dig ut härifrån måste du svara på 3 frågor. Om du svarar rätt låter jag dig gå, men om du svarar fel måste du stanna här i all evighet.");
+            Console.WriteLine("Här kommer den första frågan: Vad blir 2 plus 2, dividerat med 2?");
+            //svar på frågan här
+            Console.WriteLine("Ah, du verkar vara ganska så smart ändå. Okej, då så. Här har du nästa fråga:");
 
 
         }
