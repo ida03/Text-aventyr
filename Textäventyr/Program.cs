@@ -10,12 +10,15 @@ namespace Textäventyr
     {
         static void Main(string[] args)
         {
+            int liv = 3;
+            int låskod = 0;
+            int mattesvar = 0;
+            int svar1 = 0;
+
             Console.WriteLine("Hej och välkommen!");
             Console.WriteLine("Om du vill starta spelet, tryck Enter");
             Console.WriteLine("Om du vill stänga ner spelet, tryck Escape");
             Console.WriteLine("Lycka till!");
-
-            int liv = 3;
 
             //Vaknar i cellen
             Console.WriteLine("Något känns konstigt. Din mjuka madrass är utbytt mot något hårt som skaver in i din rygg.");
@@ -26,6 +29,7 @@ namespace Textäventyr
             Console.WriteLine(" -Jag hoppades att du skulle vakna snart. När vakterna bar in dig var du medvetslös och jag visste inte hur mycket sömnmedel de hade gett dig.");
             Console.WriteLine("Du undrar säkert var du är och det ska jag berätta för dig, men först vill jag veta ditt namn.");
             //sätt in namn här
+            string strnamn = Console.ReadLine();
 
             //Du får lappen och löser koden
             Console.WriteLine("Den gamla mannen räcker över en sliten och fuktig pappersbit. På den står det:");
@@ -34,7 +38,15 @@ namespace Textäventyr
             Console.WriteLine("2. 4 plus 4, dividerat med 2");
             Console.WriteLine("3. 5 multiplicerat med 0");
             Console.WriteLine("Du kryper fram mot låset som hänger på andra sidan om din celldörr");
-            //sätt in lösning för låskod här
+            
+            //låskod
+            Console.WriteLine("Skriv in koden till låset här:");
+            string strkod = Console.ReadLine();
+            låskod = Convert.ToInt32(strkod);
+
+            if (låskod != 1240)
+                liv--;
+            if (liv == 0) 
 
             //Kommer ut ur cellen
             Console.WriteLine("Låset slår i stengolvet och dörren går upp. Du sticker ut huvudet för att se så att ingen av vakterna hörde");
@@ -46,44 +58,67 @@ namespace Textäventyr
             
             //Möter betjänten
             Console.WriteLine("Plötsligt hör du fotsteg som kommer mot dig. Innan du hinner gömma dig rundar en man hörnet och får syn på dig.");
-            Console.WriteLine(" -Hej?! Är du inte ---, den där fången som vakterna spärrade in tidigare idag? Hur tog du dig ut?");
+            Console.WriteLine(" -Hej?! Är du inte " + strnamn + ", den där fången som vakterna spärrade in tidigare idag? Hur tog du dig ut?");
             Console.WriteLine("Jag borde egentligen kalla på vakterna, men om du löser en gåta låter jag dig gå.");
             Console.WriteLine("Vad är det som går och går, men aldrig kommer fram?");
-            //svaret på frågan här
+            
+            //svaret på frågan
+            string strklocka = Console.ReadLine();
+            strklocka = strklocka.ToLower();
+
+            if (strklocka != klockan)
+                liv--;
+            if (liv == 0)
+
+
             Console.WriteLine("Okej, du får passera. Men om jag ser dig igen kommer jag inte tveka innan jag kallar på vakterna.");
-            Console.WriteLine("Du rundar hörnet som mannen kom ifrån. Där ser du två dörrar en röd och en blå. Båda verkar vara olåsta. Vilken väljer du?");
+            Console.WriteLine("Du rundar hörnet som mannen kom ifrån. Där ser du två dörrar en röd och en blå. Båda verkar vara olåsta.");
+            Console.WriteLine("Vilken dörr väljer du?");
             //svar på frågan
+            string strdörr = Console.ReadLine();
+            strdörr = strdörr.ToLower();
+ 
+            if (strdörr = röd)
+                //röd dörr
+                Console.WriteLine("Du öppnar den röda dörren. Bakom den finns en lång korridor. Du går i vad som känns som flera timmar.");
+                Console.WriteLine("Men det är egentligen bara några minuter. Plötsligt dyker en liten flicka upp från ingenstans. Du tvärstannar och tittar på henne. Hon ser inte ut att vara mer än 6 år gammal.");
+                Console.WriteLine(" -Ursäkta. Skulle du kunna hjälpa mig med en uppgift på min matteläxa? Jag kan inte hitta min pappa och han brukar alltid hjälpa mig.");
+                Console.WriteLine("Flickan sträcker fram ett häfte med uppgifter och pekar på den längst ner på sidan.");
+                Console.WriteLine("Tom har 3 äpplen och Angelica har 5 äpplen.De bestämmer sig för att dela lika på äpplena.Hur många äpplen får de var ?");
 
-            //röd dörr
-            Console.WriteLine("Du öppnar den röda dörren. Bakom den finns en lång korridor. Du går i vad som känns som flera timmar.");
-            Console.WriteLine("Men det är egentligen bara några minuter. Plötsligt dyker en liten flicka upp från ingenstans. Du tvärstannar och tittar på henne. Hon ser inte ut att vara mer än 6 år gammal.");
-            Console.WriteLine(" -Ursäkta. Skulle du kunna hjälpa mig med en uppgift på min matteläxa? Jag kan inte hitta min pappa och han brukar alltid hjälpa mig.");
-            Console.WriteLine("Flickan sträcker fram ett häfte med uppgifter och pekar på den längst ner på sidan.");
-            Console.WriteLine("Tom har 3 äpplen och Angelica har 5 äpplen.De bestämmer sig för att dela lika på äpplena.Hur många äpplen får de var ?");
-            //svar på frågan
-            Console.WriteLine(" -Tack så mycket!");
-            Console.WriteLine("Flickan försvinner genom en dörr som du inte hade sett innan. Du fortsätter gå genom korridoren. Tillslut kommer du fram till en dörr i och öppnar den.");
-            Console.WriteLine("Bakom finns det en korridor och i slutet av den sitter en helt svart katt. Du går långsamt fram mot den och tänker precis passera när den börjar prata.");
-            Console.WriteLine(" -Hallå där! Du är väl ---, fången som vakterna tog in i förmiddags?");
-            Console.WriteLine("Du är på rätt väg för att ta dig ut härifrån, men runt hörnet där borta står det flera vakter som ska se till att ingen flyr härifrån.");
-            Console.WriteLine("Om jag hjälper dig förbi dem måste du lova att inte berätta om mig ifall du blir påkommen. Bra, följ mig.");
-            Console.WriteLine("Istället för att fortsätta genom korridoren leder katten dig tillbaka där du kom ifrån. Ni går i total tystnad och ibland stannar katten för att lyssna.");
-            Console.WriteLine("Efter en stund stannar katten framför en staty som ser ut att föreställa en katt.");
-            Console.WriteLine(" -Om du trycker på statyns högra framtass kommer en lönndörr att öppnas. Följ korridoren tills den tar slut och tryck på väggen där.");
-            Console.WriteLine("Du kommer att hamna i en korridor där du ska gå vänster. Om du gör detta borde du komma närmare utgången.");
-            Console.WriteLine("Innan du hinner tacka katten för hjälpen har den försvunnit");
+                //svar på frågan
+                string strmatte = Console.ReadLine();
+                mattesvar = Convert.ToInt32(strmatte);
 
-            //blå dörr
-            Console.WriteLine("Du öppnar den blåa dörren. Bakom finns det en korridor och i slutet av den sitter en helt svart katt.");
-            Console.WriteLine("Du går långsamt fram mot den och tänker precis passera när den börjar prata.");
-            Console.WriteLine(" -Hallå där! Du är väl ---, fången som vakterna tog in i förmiddags?");
-            Console.WriteLine("Du är på rätt väg för att ta dig ut härifrån, men runt hörnet där borta står det flera vakter som ska se till att ingen flyr härifrån.");
-            Console.WriteLine("Om jag hjälper dig förbi dem måste du lova att inte berätta om mig ifall du blir påkommen. Bra, följ mig.");
-            Console.WriteLine("Istället för att fortsätta genom korridoren leder katten dig tillbaka där du kom ifrån. Ni går i total tystnad och ibland stannar katten för att lyssna.");
-            Console.WriteLine("Efter en stund stannar katten framför en staty som ser ut att föreställa en katt.");
-            Console.WriteLine(" -Om du trycker på statyns högra framtass kommer en lönndörr att öppnas. Följ korridoren tills den tar slut och tryck på väggen där.");
-            Console.WriteLine("Du kommer att hamna i en korridor där du ska gå vänster. Om du gör detta borde du komma närmare utgången.");
-            Console.WriteLine("Innan du hinner tacka katten för hjälpen har den försvunnit");
+                if (mattesvar != 4)
+                    liv--;
+                if (liv==0)
+
+                
+                Console.WriteLine(" -Tack så mycket!");
+                Console.WriteLine("Flickan försvinner genom en dörr som du inte hade sett innan. Du fortsätter gå genom korridoren. Tillslut kommer du fram till en dörr i och öppnar den.");
+                Console.WriteLine("Bakom finns det en korridor och i slutet av den sitter en helt svart katt. Du går långsamt fram mot den och tänker precis passera när den börjar prata.");
+                Console.WriteLine(" -Hallå där! Du är väl "+strnamn+", fången som vakterna tog in i förmiddags?");
+                Console.WriteLine("Du är på rätt väg för att ta dig ut härifrån, men runt hörnet där borta står det flera vakter som ska se till att ingen flyr härifrån.");
+                Console.WriteLine("Om jag hjälper dig förbi dem måste du lova att inte berätta om mig ifall du blir påkommen. Bra, följ mig.");
+                Console.WriteLine("Istället för att fortsätta genom korridoren leder katten dig tillbaka där du kom ifrån. Ni går i total tystnad och ibland stannar katten för att lyssna.");
+                Console.WriteLine("Efter en stund stannar katten framför en staty som ser ut att föreställa en katt.");
+                Console.WriteLine(" -Om du trycker på statyns högra framtass kommer en lönndörr att öppnas. Följ korridoren tills den tar slut och tryck på väggen där.");
+                Console.WriteLine("Du kommer att hamna i en korridor där du ska gå vänster. Om du gör detta borde du komma närmare utgången.");
+                Console.WriteLine("Innan du hinner tacka katten för hjälpen har den försvunnit");
+
+            if (strdörr = blå)
+                //blå dörr
+                Console.WriteLine("Du öppnar den blåa dörren. Bakom finns det en korridor och i slutet av den sitter en helt svart katt.");
+                Console.WriteLine("Du går långsamt fram mot den och tänker precis passera när den börjar prata.");
+                Console.WriteLine(" -Hallå där! Du är väl "+strnamn+", fången som vakterna tog in i förmiddags?");
+                Console.WriteLine("Du är på rätt väg för att ta dig ut härifrån, men runt hörnet där borta står det flera vakter som ska se till att ingen flyr härifrån.");
+                Console.WriteLine("Om jag hjälper dig förbi dem måste du lova att inte berätta om mig ifall du blir påkommen. Bra, följ mig.");
+                Console.WriteLine("Istället för att fortsätta genom korridoren leder katten dig tillbaka där du kom ifrån. Ni går i total tystnad och ibland stannar katten för att lyssna.");
+                Console.WriteLine("Efter en stund stannar katten framför en staty som ser ut att föreställa en katt.");
+                Console.WriteLine(" -Om du trycker på statyns högra framtass kommer en lönndörr att öppnas. Följ korridoren tills den tar slut och tryck på väggen där.");
+                Console.WriteLine("Du kommer att hamna i en korridor där du ska gå vänster. Om du gör detta borde du komma närmare utgången.");
+                Console.WriteLine("Innan du hinner tacka katten för hjälpen har den försvunnit");
 
             //slutet
             Console.WriteLine("Du trycker på statyns högra framtass och dörren öppnas.");
@@ -94,8 +129,14 @@ namespace Textäventyr
             Console.WriteLine("För att ta dig ut härifrån måste du svara på 3 frågor. Om du svarar rätt låter jag dig gå, men om du svarar fel måste du stanna här i all evighet.");
             Console.WriteLine("Här kommer den första frågan: Vad blir 2 plus 2, dividerat med 2?");
             //svar på frågan här
-            Console.WriteLine("Ah, du verkar vara ganska så smart ändå. Okej, då så. Här har du nästa fråga:");
+            string strsvar1 = Console.ReadLine();
+            svar1 = Convert.ToInt32(strsvar1);
+            if (svar1 != 4)
+                liv--;
+            if (liv == 0)
 
+            Console.WriteLine("Ah, du verkar vara ganska så smart ändå. Okej, då så. Här har du nästa fråga:");
+            Console.WriteLine("");
 
         }
     }
