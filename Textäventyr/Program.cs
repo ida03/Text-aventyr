@@ -34,8 +34,8 @@ namespace Textäventyr
                     Environment.Exit(0);
             }
             Console.WriteLine("Lycka till!");
+            Console.WriteLine("");
 
-            //Vaknar i cellen
             Console.WriteLine("Något känns konstigt. Din mjuka madrass är utbytt mot något hårt som skaver in i din rygg.");
             Console.WriteLine("Ljudet av droppande vatten hörs runt dig.");
             Console.WriteLine("När du öppnar dina ögon ser du att du inte är i din säng hemma, utan i vad som ser ut som en mörk fängelsecell.");
@@ -90,12 +90,13 @@ namespace Textäventyr
             string strdörr = Console.ReadLine();
             strdörr = strdörr.ToLower();
             if (strdörr == "röd")
-                Console.WriteLine("Du öppnar den röda dörren. Bakom den finns en lång korridor. Du går i vad som känns som flera timmar.");
-                Console.WriteLine("Men det är egentligen bara några minuter. Plötsligt dyker en liten flicka upp från ingenstans. Du tvärstannar och tittar på henne. Hon ser inte ut att vara mer än 6 år gammal.");
+   
+                Console.WriteLine("Plötsligt dyker en liten flicka upp från ingenstans. Du tvärstannar och tittar på henne. Hon ser inte ut att vara mer än 6 år gammal.");
                 Console.WriteLine(" -Ursäkta. Skulle du kunna hjälpa mig med en uppgift på min matteläxa? Jag kan inte hitta min pappa och han brukar alltid hjälpa mig.");
                 Console.WriteLine("Flickan sträcker fram ett häfte med uppgifter och pekar på den längst ner på sidan.");
                 Console.WriteLine("Tom har 3 äpplen och Angelica har 5 äpplen.De bestämmer sig för att dela lika på äpplena.Hur många äpplen får de var ?");
-
+           
+               
             while (matteuppgift != 4)
             {
                 string strmatteuppgift = Console.ReadLine();
@@ -138,7 +139,7 @@ namespace Textäventyr
             Console.WriteLine("För att ta dig ut härifrån måste du svara på 3 frågor. Om du svarar rätt låter jag dig gå, men om du svarar fel måste du stanna här i all evighet.");
             Console.WriteLine("Här kommer den första frågan: Vad blir 2 plus 2, dividerat med 2?"); 
             
-            while (svar1 != 4)
+            while (svar1 != 2)
             {
                 string strsvar1 = Console.ReadLine();
                 svar1 = Convert.ToInt32(strsvar1);
@@ -177,6 +178,7 @@ namespace Textäventyr
             Console.WriteLine("Du följer vägen mot den stora järngrinden. Men när du försöker trycka upp grinden rör den sig inte och du känner paniken växa.");
             Console.WriteLine("Plötsligt börjar det svartna framför dina ögon och du faller till marken.");
             Console.WriteLine("När du öppnar ögonen igen ligger du i din egna säng. Den hemska resan till herrgården hänger kvar i ditt minne, men det verkar bara varit en dröm.");
+            Console.ReadLine();
         }
     }
 }
